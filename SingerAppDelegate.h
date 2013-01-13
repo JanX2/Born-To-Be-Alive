@@ -9,7 +9,7 @@
 #import <Cocoa/Cocoa.h>
 
 @interface SingerAppDelegate : NSObject <NSApplicationDelegate, NSSpeechSynthesizerDelegate> {
-    NSWindow *window;
+    NSWindow *__strong window;
 	IBOutlet NSImageView *imageView;
 	IBOutlet NSButton *startButton;
 	IBOutlet NSButton *stopButton;
@@ -19,7 +19,7 @@
 	NSSpeechSynthesizer *ns;
 }
 
-@property (assign) IBOutlet NSWindow *window;
+@property (strong) IBOutlet NSWindow *window;
 
 - (IBAction)start:(id)sender;
 - (IBAction)stop:(id)sender;
